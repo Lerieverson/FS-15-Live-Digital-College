@@ -1,0 +1,14 @@
+div{
+  width:400px; /*tamanho da caixa */
+  background-color: rgb(25, 25, 63);
+  padding: 80px;/*espaçamento interno */
+  margin: 50px;/*espaçamento externo */
+  border: 2px solid black; /*tamanho e cor da borda */
+  border-radius: 12px; /*arredondamento da borda */
+}
+div h2{
+  color: chartreuse; /*cor da fonte do sub-titulo */
+}
+div p{
+  color:azure; /*cor da fonte dos paragrafos */
+}

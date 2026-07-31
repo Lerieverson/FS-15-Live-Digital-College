@@ -1,8 +1,7 @@
 body {
   background-color: black;;
   margin: 0;
-  padding: 0;
-  
+  padding: 0; 
 }
 .menu {
   background-color: #fff;
@@ -43,10 +42,17 @@ body {
 }
 .paragrafo {
  background-color: #fff;
-  width: 1300px ;
-  margin: 0 auto 0 auto;
-  padding: 26px 26px 26px 26px;
-  display:flex;
-  gap: 50px;
-  align-items: center;
+ width: 450px;
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;  
+}
+.paragrafo h4 {
+ color:#050505;
+  margin: 0 0 0 0;
+  font-size: 30px; 
+  font-family: 'Lucida Sans'; 
+}
+paragrafo p{
+  color:black;
+  font-family: 'Lucida Sans';
 }
