@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(22, 22, 22);
+}
 div{
   width:400px; /*tamanho da caixa */
   background-color: rgb(25, 25, 63);
@@ -11,4 +14,37 @@ div h2{
 }
 div p{
   color:azure; /*cor da fonte dos paragrafos */
+}
+
+.cabeçalho{
+   background-color: #f0cd08;
+  width: 1300px ;
+  margin: 0 auto 0 auto;
+  padding: 16px 26px 16px 26px;
+  display:flex;
+  gap: 80px;
+  align-items: center;
+}
+.cabeçalho nav{
+  display: flex;
+  gap: 25px;
+}
+.cabeçalho nav a{
+  color:black;
+   text-decoration: none;
+   font-family: 'Lucida Sans';
+}
+
+
+
+div midia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:16px;
+}
+.cabeçalho img {
+  width: 30px;
+  height:30px;
+  object-fit: contain;
 }
