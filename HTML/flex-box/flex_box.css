@@ -24,7 +24,14 @@ body {
 }
 .menu midia {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap:26px;
+}
+.midia img {
+  width: 30px;
+  height:30px;
+  object-fit: contain;
 }
 .menu button {
   color:#44a2dd;
@@ -33,4 +40,13 @@ body {
   padding: 12px 24px 12px 24px;
   background-color: #fff;
   cursor: pointer;
+}
+.paragrafo {
+ background-color: #fff;
+  width: 1300px ;
+  margin: 0 auto 0 auto;
+  padding: 26px 26px 26px 26px;
+  display:flex;
+  gap: 50px;
+  align-items: center;
 }
