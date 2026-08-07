@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Igreja Graça e Vida</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    /* Estilos personalizados para um toque moderno */
+    .hero-section {
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), 
+                  url('https://images.unsplash.com/photo-1438032005730-c779502df39b?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      min-height: 80vh;
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+
+  <!-- HEADER -->
+  <header class="sticky-top bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light container py-3">
+      <a class="navbar-brand fw-bold text-primary fs-3" href="#">
+        <i class="bi bi-cross text-warning me-1"></i> Assembleia de Deus Min. Palavra Fiel
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cultos">Cultos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Cadastro">Cadastro</a></li>
+        </ul>
+        <a href="#contato" class="btn btn-primary ms-lg-3 rounded-pill px-4">Fale Conosco</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION (Destaque Principal) -->
+    <section id="inicio" class="hero-section text-white d-flex align-items-center justify-content-center text-center px-3">
+      <div class="container my-5">
+        <span class="badge bg-warning text-dark fs-6 mb-3 px-3 py-2 rounded-pill">Bem-vindo à nossa igreja</span>
+        <h1 class="display-3 fw-bold mb-3">Um lugar de fé, esperança e amor</h1>
+        <p class="lead mb-4 mx-auto" style="max-width: 650px;">
+          Existimos para amar a Deus, servir ao próximo e transformar vidas através da mensagem do Evangelho.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#cultos" class="btn btn-primary btn-lg rounded-pill px-4">Horários dos Cultos</a>
+          <a href="#sobre" class="btn btn-outline-light btn-lg rounded-pill px-4">Conheça-nos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE NOS SECTION -->
+    <section id="sobre" class="py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1510936111840-65e151ad71bb?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded-4 shadow" alt="Comunidade unida">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bold text-primary mb-3">Nossa Missão</h2>
+            <p class="fs-5 text-muted">
+              Somos uma família acolhedora focada em cultivar relacionamentos autênticos com Deus e com as pessoas ao nosso redor.
+            </p>
+            <p class="text-secondary">
+              Queremos ser um farol de esperança em nossa cidade, oferecendo ensino bíblico relevante, adoração genuína e oportunidades práticas para servir a comunidade local.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="p-3 bg-white border-start border-primary border-4 rounded shadow-sm">
+                  <h5 class="fw-bold mb-1">Amor</h5>
+                  <p class="mb-0 small text-muted">Acolhemos a todos sem distinção ou preconceito.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-white border-start border-warning border-4 rounded shadow-sm">
+                  <h5 class="fw-bold mb-1">Propósito</h5>
+                  <p class="mb-0 small text-muted">Ajudamos você a descobrir e viver seu chamado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><hr class="my-0"></div>
+
+    <!-- CULTOS E ASIDE LAYOUT -->
+    <section id="cultos" class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row g-4">
+          
+          <!-- Conteúdo Principal de Cultos -->
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-4">Nossos Cultos Semanais</h2>
+            <p class="text-muted mb-4">
+              Junte-se a nós presencialmente ou assista às transmissões online. Todos são bem-vindos!
+            </p>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm card-hover bg-light">
+                  <div class="card-body p-4">
+                    <div class="text-primary mb-3"><i class="bi bi-sun-fill fs-1"></i></div>
+                    <h4 class="card-title fw-bold">Culto de Domingo</h4>
+                    <p class="card-text text-muted">
+                      Momento de adoração em família, louvor inspirador e pregação da Palavra.
+                    </p>
+                    <hr>
+                    <p class="fw-bold text-primary mb-0"><i class="bi bi-clock me-2"></i>Domingos ás 18h</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm card-hover bg-light">
+                  <div class="card-body p-4">
+                    <div class="text-warning mb-3"><i class="bi bi-book-half fs-1"></i></div>
+                    <h4 class="card-title fw-bold">Quarta da Vitória</h4>
+                    <p class="card-text text-muted">
+                      Um culto de oração, louvor e aplicação da palavra.
+                    </p>
+                    <hr>
+                    <p class="fw-bold text-warning mb-0"><i class="bi bi-clock me-2"></i>Quartas-feiras às 19h30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ASIDE (Barra Lateral) -->
+          <aside class="col-lg-4">
+            <div class="bg-primary text-white p-4 rounded-4 shadow-sm mb-4">
+              <h4 class="fw-bold mb-3"><i class="bi bi-bell-fill me-2"></i>Avisos Importantes</h4>
+              <p class="small">
+                A Escola Bíblica Dominical é todo domingo de 09h ás 11h! Traga sua bíblia, á revista e um caderno.
+              </p>
+              <hr class="border-white opacity-25">
+              <p class="small mb-0">
+                Ação Social: Estamos arrecadando alimentos não perecíveis durante todo este mês.
+              </p>
+            </div>
+
+            <div class="bg-light p-4 rounded-4 border">
+              <h5 class="fw-bold mb-3">Versículo do Dia</h5>
+              <blockquote class="blockquote fs-6 text-muted mb-2">
+                <p>"Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crê não perca, mas tenha a vida eterna."</p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                João 3:16
+              </figcaption>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contato" class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <h4 class="fw-bold text-warning mb-3">Assembleia de Deus Min. Palavra Fiel</h4>
+          <p class="text-secondary small">
+            Um lugar de recomeços e crescimento espiritual. Venha fazer parte desta família!
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Localização & Contato</h5>
+          <p class="text-secondary mb-1"><i class="bi bi-geo-alt-fill text-warning me-2"></i>Av. Central, 1000 - Centro</p>
+          <p class="text-secondary mb-1"><i class="bi bi-telephone-fill text-warning me-2"></i>(11) 99999-8888</p>
+          <p class="text-secondary"><i class="bi bi-envelope-fill text-warning me-2"></i>contato@gracaevida.org</p>
+        </div>
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Redes Sociais</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="text-center text-secondary small">
+        <p class="mb-0">&copy; 2026 Igreja Graça e Vida. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
