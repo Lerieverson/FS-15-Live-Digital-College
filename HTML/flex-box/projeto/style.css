@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(50, 50, 50);
+}
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+header .menu a {
+  text-decoration: none;
+  padding: 4px 8px;
+  
+}
+header .menu a:hover {
+  background-color: lab(38.93% 59.55 -78.58); 
+  color:blanchedalmond;
+  width: 80px;
+}
+.profile .email {
+  font-size: 10px;
+}
+main {
+  width: 300px;
+  margin: 0 auto;
+}
+main h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+main form {
+  width: 240px;
+  background-color: #ece912;
+  margin: 0 auto;
+}
+main form .task {
+  display: flex;
+  justify-content: space-between;
+  
+}
+main form .task button {
+  padding: 4px 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: rgb(50, 50, 50);
+  color: blanchedalmond;
+}
+main form .task button {
+  background-color: rgb(50, 50, 50);
+  transition: 0.3s;
+}
