@@ -1,0 +1,8 @@
+Cores:
+Background: 239, 215,197,100
+Background-site: 244,227,215,100
+Containers: 66, 35, 22, 100 
+
+Font:
+caladea
+
