@@ -3,6 +3,9 @@ const tBody = document.getElementById('list-task');
 const btnTaskDoneConfirm = document.getElementById('btnTaskDoneConfirm');
 const tasks = [];
 
+const modal = document.getElementById('taskDoneModal');
+let doneModal = null;
+
 // Função criada para excluir um elemento do nosso array
 function deleteTask(index) {
   tasks.splice(index, 1);

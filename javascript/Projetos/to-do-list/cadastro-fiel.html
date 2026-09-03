@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Membros | Assembleia de Deus Ministério Palavra Fiel</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef4ff 0%,
+                    #f8fafc 50%,
+                    #fff8e7 100%
+                );
+            min-height: 100vh;
+            color: #1e293b;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b1f44,
+                    #123b76
+                );
+
+            color: white;
+            padding: 25px 0;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .church-logo {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #d4af37;
+            color: white;
+
+            border-radius: 16px;
+
+            font-size: 30px;
+
+            box-shadow:
+                0 8px 20px rgba(212, 175, 55, 0.35);
+        }
+
+        .church-name {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .church-subtitle {
+            font-size: 13px;
+            opacity: 0.75;
+            margin: 3px 0 0;
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .main-container {
+            max-width: 1100px;
+            margin: 45px auto;
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-title h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #0b1f44;
+        }
+
+        .page-title p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        .title-line {
+            width: 70px;
+            height: 4px;
+            background: #d4af37;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .form-card {
+            background: white;
+
+            border: none;
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 40px rgba(15, 23, 42, 0.10);
+        }
+
+        .card-header-custom {
+            background:
+                linear-gradient(
+                    135deg,
+                    #0b1f44,
+                    #174b8a
+                );
+
+            color: white;
+
+            padding: 22px 28px;
+
+            font-weight: 700;
+        }
+
+        .card-header-custom i {
+            color: #d4af37;
+            margin-right: 8px;
+        }
+
+        .card-body {
+            padding: 35px;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section-title {
+            display: flex;
+            align-items: center;
+
+            gap: 10px;
+
+            color: #0b1f44;
+
+            font-size: 18px;
+            font-weight: 800;
+
+            margin: 30px 0 20px;
+
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .section-title i {
+            color: #d4af37;
+            font-size: 21px;
+        }
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #334155;
+        }
+
+        .form-control,
+        .form-select {
+
+            border: 1px solid #dbe3ef;
+
+            border-radius: 10px;
+
+            padding: 12px 14px;
+
+            min-height: 48px;
+
+            transition: 0.25s;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+
+            border-color: #174b8a;
+
+            box-shadow:
+                0 0 0 4px rgba(23, 75, 138, 0.10);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .input-group-text {
+
+            background: #f8fafc;
+
+            border-color: #dbe3ef;
+
+            color: #174b8a;
+        }
+
+        /* =========================
+           FOTO
+        ========================= */
+
+        .photo-box {
+
+            border: 2px dashed #cbd5e1;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            text-align: center;
+
+            background: #f8fafc;
+
+            transition: 0.3s;
+        }
+
+        .photo-box:hover {
+            border-color: #174b8a;
+            background: #f1f5f9;
+        }
+
+        .photo-icon {
+
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 12px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #e8eef8;
+
+            color: #174b8a;
+
+            font-size: 35px;
+        }
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn-custom {
+
+            border: none;
+
+            border-radius: 10px;
+
+            padding: 12px 22px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary-custom {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #123b76,
+                    #1d5ba7
+                );
+
+            color: white;
+
+            box-shadow:
+                0 7px 18px rgba(18, 59, 118, 0.25);
+        }
+
+        .btn-primary-custom:hover {
+            color: white;
+        }
+
+        .btn-gold {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #c49b25,
+                    #e1bd4a
+                );
+
+            color: white;
+
+            box-shadow:
+                0 7px 18px rgba(196, 155, 37, 0.25);
+        }
+
+        .btn-secondary-custom {
+
+            background: #f1f5f9;
+
+            color: #475569;
+
+            border: 1px solid #e2e8f0;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #0b1f44;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .main-container {
+                margin: 25px 15px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .card-body {
+                padding: 22px;
+            }
+
+            .church-name {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="container">
+
+        <div class="d-flex align-items-center gap-3">
+
+            <div class="church-logo">
+                <i class="bi bi-cross"></i>
+            </div>
+
+            <div>
+
+                <h2 class="church-name">
+                    Assembleia de Deus
+                </h2>
+
+                <p class="church-subtitle">
+                    Ministério Palavra Fiel
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
+<main class="container main-container">
+
+
+    <!-- TÍTULO -->
+
+    <div class="page-title">
+
+        <h1>
+            Cadastro de Membro
+        </h1>
+
+        <div class="title-line"></div>
+
+        <p>
+            Preencha os dados abaixo para realizar o cadastro do membro.
+        </p>
+
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+
+    <div class="card form-card">
+
+
+        <div class="card-header-custom">
+
+            <i class="bi bi-person-plus-fill"></i>
+
+            Ficha de Cadastro
+
+        </div>
+
+
+        <div class="card-body">
+
+
+            <form id="formMembro">
+
+
+                <!-- =========================
+                     DADOS PESSOAIS
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-person-vcard"></i>
+
+                    Dados Pessoais
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <!-- Nome -->
+
+                    <div class="col-md-8">
+
+                        <label class="form-label">
+                            Nome completo *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            class="form-control"
+                            placeholder="Digite o nome completo"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Sexo -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Sexo *
+                        </label>
+
+                        <select
+                            id="sexo"
+                            class="form-select"
+                            required
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>
+                                Masculino
+                            </option>
+
+                            <option>
+                                Feminino
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- CPF -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            CPF
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            class="form-control"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                        >
+
+                    </div>
+
+
+                    <!-- Data nascimento -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Data de nascimento *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="nascimento"
+                            class="form-control"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Estado civil -->
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Estado civil
+                        </label>
+
+                        <select
+                            id="estadoCivil"
+                            class="form-select"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>Solteiro(a)</option>
+                            <option>Casado(a)</option>
+                            <option>Divorciado(a)</option>
+                            <option>Viúvo(a)</option>
+                            <option>Outro</option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     CONTATO
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-telephone"></i>
+
+                    Dados de Contato
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Telefone / WhatsApp *
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                <i class="bi bi-whatsapp"></i>
+                            </span>
+
+                            <input
+                                type="text"
+                                id="telefone"
+                                class="form-control"
+                                placeholder="(00) 00000-0000"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            E-mail
+                        </label>
+
+                        <div class="input-group">
+
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope"></i>
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                class="form-control"
+                                placeholder="email@exemplo.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     ENDEREÇO
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-geo-alt"></i>
+
+                    Endereço
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-3">
+
+                        <label class="form-label">
+                            CEP
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cep"
+                            class="form-control"
+                            placeholder="00000-000"
+                            maxlength="9"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-7">
+
+                        <label class="form-label">
+                            Endereço
+                        </label>
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            class="form-control"
+                            placeholder="Rua, Avenida..."
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-2">
+
+                        <label class="form-label">
+                            Número
+                        </label>
+
+                        <input
+                            type="text"
+                            id="numero"
+                            class="form-control"
+                            placeholder="Nº"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-5">
+
+                        <label class="form-label">
+                            Bairro
+                        </label>
+
+                        <input
+                            type="text"
+                            id="bairro"
+                            class="form-control"
+                            placeholder="Bairro"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-5">
+
+                        <label class="form-label">
+                            Cidade
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            class="form-control"
+                            placeholder="Cidade"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-2">
+
+                        <label class="form-label">
+                            UF
+                        </label>
+
+                        <select
+                            id="uf"
+                            class="form-select"
+                        >
+
+                            <option value="">
+                                UF
+                            </option>
+
+                            <option>RJ</option>
+                            <option>SP</option>
+                            <option>MG</option>
+                            <option>ES</option>
+                            <option>BA</option>
+                            <option>PR</option>
+                            <option>SC</option>
+                            <option>RS</option>
+                            <option>DF</option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     VIDA MINISTERIAL
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-book"></i>
+
+                    Informações Ministeriais
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Data de batismo
+                        </label>
+
+                        <input
+                            type="date"
+                            id="batismo"
+                            class="form-control"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Cargo / Função
+                        </label>
+
+                        <select
+                            id="cargo"
+                            class="form-select"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>Membro</option>
+                            <option>Obreiro</option>
+                            <option>Diácono</option>
+                            <option>Presbítero</option>
+                            <option>Evangelista</option>
+                            <option>Pastor</option>
+                            <option>Missionário(a)</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <label class="form-label">
+                            Departamento
+                        </label>
+
+                        <select
+                            id="departamento"
+                            class="form-select"
+                        >
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>Sem departamento</option>
+                            <option>Escola Bíblica Dominical</option>
+                            <option>Louvor</option>
+                            <option>Evangelismo</option>
+                            <option>Missões</option>
+                            <option>Jovens</option>
+                            <option>Senhoras</option>
+                            <option>Crianças</option>
+                            <option>Adolescentes</option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     CONTATO EMERGÊNCIA
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-person-exclamation"></i>
+
+                    Contato de Emergência
+
+                </div>
+
+
+                <div class="row g-4">
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Nome do contato
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contatoEmergencia"
+                            class="form-control"
+                            placeholder="Nome do responsável"
+                        >
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <label class="form-label">
+                            Telefone do contato
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefoneEmergencia"
+                            class="form-control"
+                            placeholder="(00) 00000-0000"
+                        >
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- =========================
+                     FOTO
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-camera"></i>
+
+                    Foto do Membro
+
+                </div>
+
+
+                <div class="photo-box">
+
+                    <div class="photo-icon">
+
+                        <i class="bi bi-person"></i>
+
+                    </div>
+
+                    <p class="mb-2">
+                        Selecione uma foto para identificação
+                    </p>
+
+                    <input
+                        type="file"
+                        id="foto"
+                        class="form-control"
+                        accept="image/*"
+                    >
+
+                </div>
+
+
+                <!-- =========================
+                     OBSERVAÇÕES
+                ========================= -->
+
+                <div class="section-title">
+
+                    <i class="bi bi-chat-left-text"></i>
+
+                    Observações
+
+                </div>
+
+
+                <textarea
+                    id="observacoes"
+                    class="form-control"
+                    placeholder="Digite alguma informação adicional..."
+                ></textarea>
+
+
+<!-- =========================
+     BOTÕES
+========================= -->
+
+<div class="d-flex justify-content-end gap-3 mt-4 pt-4 border-top">
+
+    <!-- Atualizar página -->
+    <button
+        type="button"
+        class="btn-custom btn-secondary-custom"
+        onclick="atualizarPagina()"
+        title="Atualizar página"
+    >
+        <i class="bi bi-arrow-clockwise"></i>
+        Atualizar
+    </button>
+
+
+    <!-- Limpar formulário -->
+    <button
+        type="button"
+        class="btn-custom btn-secondary-custom"
+        onclick="limparFormulario()"
+        title="Limpar formulário"
+    >
+        <i class="bi bi-eraser"></i>
+        Limpar
+    </button>
+
+
+    <!-- Cadastrar membro -->
+    <button
+        type="submit"
+        class="btn-custom btn-primary-custom"
+        title="Cadastrar membro"
+    >
+        <i class="bi bi-person-plus-fill"></i>
+        Cadastrar Membro
+    </button>
+
+</div>
+
+
+ 
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        Assembleia de Deus Ministério Palavra Fiel
+    </strong>
+
+    <br>
+
+    Sistema de Cadastro de Membros © 2026
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+// ======================================
+// MÁSCARA CPF
+// ======================================
+
+document.getElementById('cpf').addEventListener('input', function () {
+
+    let valor = this.value.replace(/\D/g, '');
+
+    valor = valor.substring(0, 11);
+
+    valor = valor.replace(
+        /(\d{3})(\d)/,
+        '$1.$2'
+    );
+
+    valor = valor.replace(
+        /(\d{3})(\d)/,
+        '$1.$2'
+    );
+
+    valor = valor.replace(
+        /(\d{3})(\d{1,2})$/,
+        '$1-$2'
+    );
+
+    this.value = valor;
+
+});
+
+
+// ======================================
+// MÁSCARA TELEFONE
+// ======================================
+
+function mascaraTelefone(input) {
+
+    input.addEventListener('input', function () {
+
+        let valor = this.value.replace(/\D/g, '');
+
+        valor = valor.substring(0, 11);
+
+        if (valor.length <= 10) {
+
+            valor = valor.replace(
+                /^(\d{2})(\d{4})(\d)/,
+                '($1) $2-$3'
+            );
+
+        } else {
+
+            valor = valor.replace(
+                /^(\d{2})(\d{5})(\d)/,
+                '($1) $2-$3'
+            );
+
+        }
+
+        this.value = valor;
+
+    });
+
+}
+
+
+mascaraTelefone(
+    document.getElementById('telefone')
+);
+
+mascaraTelefone(
+    document.getElementById('telefoneEmergencia')
+);
+
+
+// ======================================
+// MÁSCARA CEP
+// ======================================
+
+document.getElementById('cep').addEventListener('input', function () {
+
+    let valor = this.value.replace(/\D/g, '');
+
+    valor = valor.substring(0, 8);
+
+    valor = valor.replace(
+        /^(\d{5})(\d)/,
+        '$1-$2'
+    );
+
+    this.value = valor;
+
+});
+
+
+// ======================================
+// ENVIO DO FORMULÁRIO
+// ======================================
+
+document.getElementById('formMembro')
+.addEventListener('submit', function (event) {
+
+    event.preventDefault();
+
+
+    const nome =
+        document.getElementById('nome').value.trim();
+
+
+    const telefone =
+        document.getElementById('telefone').value.trim();
+
+
+    if (nome === '') {
+
+        alert('Digite o nome completo do membro.');
+
+        document.getElementById('nome').focus();
+
+        return;
+
+    }
+
+
+    if (telefone === '') {
+
+        alert('Digite o telefone do membro.');
+
+        document.getElementById('telefone').focus();
+
+        return;
+
+    }
+
+
+    alert(
+        'Membro cadastrado com sucesso!'
+    );
+
+
+    console.log('Nome:', nome);
+
+    console.log('Telefone:', telefone);
+
+
+});
+
+
+// ======================================
+// LIMPAR FORMULÁRIO
+// ======================================
+
+function limparFormulario() {
+
+    const confirmar = confirm(
+        'Deseja realmente limpar todos os dados preenchidos?'
+    );
+
+
+    if (confirmar) {
+
+        document
+            .getElementById('formMembro')
+            .reset();
+
+    }
+
+}
+// ======================================
+// ATUALIZAR PÁGINA
+// ======================================
+function atualizarPagina() {
+
+    const confirmar = confirm(
+        'Deseja atualizar a página? Os dados que ainda não foram cadastrados serão perdidos.'
+    );
+
+    if (confirmar) {
+
+        location.reload();
+
+    }
+
+}
+
+
+</script>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
+```
